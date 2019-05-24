@@ -6,6 +6,7 @@ export default Component.extend(Droppable, {
   classNameBindings: ['overrideClass'],
   overrideClass: 'draggable-object-target',
   isOver: false,
+  attributeBindings:["tabindex"],
 
   handlePayload(payload, event) {
     let obj = this.get('coordinator').getObject(payload,{target: this});
